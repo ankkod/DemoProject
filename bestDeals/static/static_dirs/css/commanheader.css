@@ -1,0 +1,20 @@
+#commanheader
+{
+    margin: 0 auto;
+    background: #cc3300;
+    text-decoration-color: white;
+    color: white;
+    height:30px; 
+   position:relative ;
+}
+
+#commanfooter
+{
+  background:#262626 ;
+  height: 300px;
+  width:1500px;
+  position:absolute ;
+  top:600px;
+  color: white;  
+  margin: 0 auto;    
+}

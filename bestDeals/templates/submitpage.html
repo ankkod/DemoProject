@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Snatch A Deal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+       
+        <link href="{% static 'css/submittable.css'%}" rel="stylesheet">
+        <link href="{% static 'css/commanheader.css'%}" rel="stylesheet">
+        <link href="{% static 'img/single-bird-icon.png'%}" rel="shortcut icon">
+        
+       
+        <script src="{% static 'css/bootstrap.css'%}"></script>
+        <script src="{% static 'js/jquery.js'%}"></script>
+        <link href="{% static 'css/jquery-ui.css'%}" rel="stylesheet">
+        <link href="{% static 'css/jquery-ui.min.css'%}" rel="stylesheet">
+        
+    </head>
+   <body>
+       <div id="commanheader">
+           
+           <h4>  Snatch A Deal </h4>
+            
+       </div>
+       <h4>Share A Deal</h4>
+<select id="selectMe">
+  <option value="deals">Deals</option>
+  <option value="vouchers">Vouchers</option>
+  <option value="freebies">Freebies</option>
+  <option value="ask">Ask</option>
+</select>
+ <!------------------------------------------------------------------------------------------>      
+ <div id="deals" class="group">
+     <form action="submitdeal/" method="get">
+         <table id="tableleft" cellspacing="10">
+             <tr>
+                 <td>DEAL URL :</td>
+                  <td><input type="text" name="dealurl" value=""></td>
+             </tr>    
+             <tr>
+                 <td>TITLE:</td>
+                  <td><input type="text" name="dealtitle" value=""></td>
+             </tr>    
+             <tr>
+                 <td>PRICE :</td>
+                  <td><input type="text" name="dealprice" value=""></td>
+             </tr>    
+             <tr>
+                 <td>DETAILS :</td>
+                  <td><input type="text" name="dealdetails" value=""></td>
+             </tr>    
+             
+            </table>
+         <table id="tableright" cellspacing="10">
+             <tr>
+                 <td>UPLOAD IMAGE</td>
+                 <td> <input type="file" name="dealuploadimage"> </td>
+                 
+             </tr>
+             <tr>
+             <td>OR Image URL :</td>
+             <td><input type="text" name="dealimageurl"></td>
+             </tr>
+             <tr>
+                 <td> TAGS :</td>
+                 <td><input type="text" name="dealtags"></td>
+             </tr>   
+             <tr>
+                 <td>START DATE</td>
+                 <td>END DATE</td>
+
+             </tr>
+             <tr>
+                 <td><input type="text" name="dealstartdate"></td>
+                 <td><input type="text" name="dealenddate"></td>
+
+             </tr>
+             
+             </table>
+         <input type="submit" value="Submit" style="top: 400px;position: absolute;left: 200px"/>
+     </form>
+      
+ </div>
+  <!------------------------------------------------------------------------------------------> 
+       <div id="vouchers" class="group">
+        <form action="submitvouchers/" method="get">
+         <table id="tableleft" cellspacing="10">
+             <tr>
+                 <td>DEAL URL :</td>
+                  <td><input type="text" name="voucherurl" value=""></td>
+             </tr>    
+             <tr>
+                 <td>TITLE:</td>
+                  <td><input type="text" name="vouchertitle" value=""></td>
+             </tr>    
+             <tr>
+                 <td>TOPIC :</td>
+                  <td><input type="text" name="vouchertopic" value=""></td>
+             </tr>    
+             <tr>
+                 <td>DISCOUNT :</td>
+                  <td><input type="text" name="voucherdiscount" value=""></td>
+             </tr>    
+              <tr>
+                 <td>CODE :</td>
+                  <td><input type="text" name="vouchercode" value=""></td>
+             </tr>    
+             
+            </table>
+         <table id="tableright" cellspacing="10">
+            
+             <tr>
+                 <td> TAGS :</td>
+                 <td><input type="text" name="vouchertags"></td>
+             </tr>
+              <tr>
+                 <td>MINIMUM SPEND &#8377</td>
+                 <td> <input type="text" name="voucherminspend"> </td>
+                 
+             </tr>
+             <tr>
+             <td>APPLIES TO :</td>
+             <td><input type="text" name="voucherappliesto"></td>
+             </tr>
+             <tr>
+                 <td>START DATE</td>
+                 <td>END DATE</td>
+
+             </tr>
+             <tr>
+                 <td><input type="text" name="voucherstartdate"></td>
+                 <td><input type="text" name="voucherenddate"></td>
+
+             </tr>
+             
+             </table>
+         <input type="submit" value="Submit" style="top: 400px;position: absolute;left: 200px"/>
+     </form>
+ 
+           
+       </div>
+    <!------------------------------------------------------------------------------------------> 
+
+       <div id="freebies" class="group">
+           <form>
+         <table id="tableleft" cellspacing="10">
+             <tr>
+                 <td>DEAL URL :</td>
+                  <td><input type="text" name="" value=""></td>
+             </tr>    
+             <tr>
+                 <td>TITLE:</td>
+                  <td><input type="text" name="" value=""></td>
+             </tr>    
+             <tr>
+                 <td>PRICE :</td>
+                  <td><input type="text" name="" value=""></td>
+             </tr>    
+             <tr>
+                 <td>DETAILS :</td>
+                  <td><input type="text" name="" value=""></td>
+             </tr>    
+             
+            </table>
+         <table id="tableright" cellspacing="10">
+             <tr>
+                 <td>UPLOAD IMAGE</td>
+                 <td> <input type="file"> </td>
+                 
+             </tr>
+             <tr>
+             <td>OR Image URL :</td>
+             <td><input type="text"></td>
+             </tr>
+             <tr>
+                 <td> TAGS :</td>
+                 <td><input type="text"></td>
+             </tr>   
+             <tr>
+                 <td>START DATE</td>
+                 <td>END DATE</td>
+
+             </tr>
+             <tr>
+                 <td><input type="text"></td>
+                 <td><input type="text"></td>
+
+             </tr>
+             
+             </table>
+         <input type="submit" value="Submit" style="top: 400px;position: absolute;left: 200px"/>
+     </form>
+  
+           
+       </div>
+       <div id="ask" class="group">
+           <form>
+         <table id="tableleft" cellspacing="10">
+             <tr>
+                 <td>QUESTIONS</td>
+                 
+             </tr>
+             <tr>
+            
+                 <td><input type="text" size="150"></td>
+             </tr>
+             <tr>
+                 <td>TOPICS</td>
+                 
+             </tr>
+             <tr>
+            
+             <td><input type="text" size="150"></td>
+             </tr>   
+              <tr>
+                 <td>DETAILS</td>
+                 
+             </tr>
+             <tr>
+            
+             <td><input type="text" size="150"></td>
+             </tr>   
+             
+             
+             </table>
+         <input type="submit" value="Submit" style="top: 400px;position: absolute;left: 200px"/>
+     </form>
+ 
+       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="commanfooter">
+           <h4>
+              Snatch A Deal
+           </h4> 
+           <h5>
+             Snatch A deal is a community for online and offline shopping which offers maximum deals for the customers   
+           </h5>
+           
+           <h5>
+               Now :2 &nbsp;&nbsp;&nbsp;&nbsp;
+              Guest:0 &nbsp;&nbsp;&nbsp;&nbsp;
+              Members:0 &nbsp;&nbsp;&nbsp;&nbsp;
+           </h5>
+           
+           <h5>
+             Connect With Us At:
+             facebook &nbsp;&nbsp;&nbsp;&nbsp; twitter
+             
+                  
+           </h5>    
+               
+       </div>  
+
+
+
+ <script src="{% static 'js/selection.js'%}" type="text/javascript"></script>
+
+    </body>
+</html>
