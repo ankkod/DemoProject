@@ -58,7 +58,7 @@ ROOT_URLCONF = 'bestDeals.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/MY STUFF/IDEA/bestDeals/templates'],
+        'DIRS': ['C:/Users/ZORO/Documents/Project/bestDeals/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
