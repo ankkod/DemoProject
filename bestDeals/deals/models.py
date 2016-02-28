@@ -16,7 +16,7 @@ class Ask(models.Model):
     details = models.CharField(max_length=100)
     tags = models.CharField(max_length=45, blank=True, null=True)
     category = models.ForeignKey('Category', models.DO_NOTHING, blank=True, null=True)
-    emailadd = models.CharField(max_length=150)
+    emailadd = models.CharField(max_length=150, blank=True, null=True)
     date = models.DateField(blank=True, null=True)
 
     class Meta:
@@ -308,7 +308,7 @@ class Voucher(models.Model):
     category = models.ForeignKey(Category, models.DO_NOTHING, blank=True, null=True)
     startdate = models.DateField(blank=True, null=True)
     enddate = models.DateField(blank=True, null=True)
-    emailadd = models.CharField(max_length=150)
+    emailadd = models.CharField(max_length=150, blank=True, null=True)
     date = models.DateField(blank=True, null=True)
     upvotecount = models.IntegerField(blank=True, null=True)
     downvotecount = models.IntegerField(blank=True, null=True)

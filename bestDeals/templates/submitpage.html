@@ -148,39 +148,35 @@ and open the template in the editor.
     <!------------------------------------------------------------------------------------------> 
 
        <div id="freebies" class="group">
-           <form>
+           <form action="submitfreebie/" method="get">
          <table id="tableleft" cellspacing="10">
              <tr>
                  <td>DEAL URL :</td>
-                  <td><input type="text" name="" value=""></td>
+                  <td><input type="text" name="freebieurl" value=""></td>
              </tr>    
              <tr>
                  <td>TITLE:</td>
-                  <td><input type="text" name="" value=""></td>
-             </tr>    
-             <tr>
-                 <td>PRICE :</td>
-                  <td><input type="text" name="" value=""></td>
+                  <td><input type="text" name="freebietitle" value=""></td>
              </tr>    
              <tr>
                  <td>DETAILS :</td>
-                  <td><input type="text" name="" value=""></td>
+                  <td><input type="text" name="freebiedetails" value=""></td>
              </tr>    
              
             </table>
          <table id="tableright" cellspacing="10">
              <tr>
                  <td>UPLOAD IMAGE</td>
-                 <td> <input type="file"> </td>
+                 <td> <input type="file" name="freebieuploadimage"> </td>
                  
              </tr>
              <tr>
              <td>OR Image URL :</td>
-             <td><input type="text"></td>
+             <td><input type="text" name="freebieimageurl"></td>
              </tr>
              <tr>
                  <td> TAGS :</td>
-                 <td><input type="text"></td>
+                 <td><input type="text" name="freebietags"></td>
              </tr>   
              <tr>
                  <td>START DATE</td>
@@ -188,8 +184,8 @@ and open the template in the editor.
 
              </tr>
              <tr>
-                 <td><input type="text"></td>
-                 <td><input type="text"></td>
+                 <td><input type="text" name="freebiestartdate"></td>
+                 <td><input type="text" name="freebieenddate"></td>
 
              </tr>
              
@@ -199,8 +195,11 @@ and open the template in the editor.
   
            
        </div>
+
+    <!------------------------------------------------------------------------------------------> 
+
        <div id="ask" class="group">
-           <form>
+           <form action="submitask/" method="get">
          <table id="tableleft" cellspacing="10">
              <tr>
                  <td>QUESTIONS</td>
@@ -208,7 +207,7 @@ and open the template in the editor.
              </tr>
              <tr>
             
-                 <td><input type="text" size="150"></td>
+                 <td><input type="text" size="150" name="askquestion"></td>
              </tr>
              <tr>
                  <td>TOPICS</td>
@@ -216,7 +215,7 @@ and open the template in the editor.
              </tr>
              <tr>
             
-             <td><input type="text" size="150"></td>
+             <td><input type="text" size="150" name="asktopic"></td>
              </tr>   
               <tr>
                  <td>DETAILS</td>
@@ -224,7 +223,7 @@ and open the template in the editor.
              </tr>
              <tr>
             
-             <td><input type="text" size="150"></td>
+             <td><input type="text" size="150" name="askdetails"></td>
              </tr>   
              
              

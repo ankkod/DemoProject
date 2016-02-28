@@ -49,3 +49,28 @@ def submitvouchers(request):
     
     return render_to_response('check.html')
          
+def submitfreebie(request):
+    freebieurl=request.GET.get("freebieurl",None)
+    freebietitle=request.GET.get("freebietitle",None)
+    freebiedetails=request.GET.get("freebiedetails",None)
+    freebieuploadimage=request.GET.get("freebieuploadimage",None)
+    freebieimageurl=request.GET.get("freebieimageurl",None)
+    freebietags=request.GET.get("freebietags",None)
+    freebiestartdate=request.GET.get("freebiestartdate",None)
+    freebieenddate=request.GET.get("freebieenddate",None)
+    freebieresult=deals.models.Freebies(freebies_id=001,deal_url=freebieurl,details=freebiedetails,image=freebieuploadimage,title=freebietitle,tags=freebietags,startdate=freebiestartdate,enddate=freebieenddate)
+    freebieresult.save()
+    
+    return render_to_response('check.html')
+       
+       
+def submitask(request):         
+    askquestion=request.GET.get("askquestion",None)
+    asktags=request.GET.get("asktopic",None)
+    askdetails=request.GET.get("askdetails",None)
+    
+    askresult=deals.models.Ask(ask_id=001,question=askquestion,details=askdetails,tags=asktags)
+    askresult.save()
+    
+    return render_to_response('check.html')
+   

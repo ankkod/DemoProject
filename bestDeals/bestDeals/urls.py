@@ -16,11 +16,14 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from deals.views import submit,submitdeal,submitvouchers
+from deals.views import submit,submitdeal,submitvouchers,submitfreebie,submitask
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^submit$',submit),
     url(r'^submitdeal/$',submitdeal),
     url(r'^submitvouchers/$',submitvouchers),
+    url(r'^submitfreebie/$',submitfreebie),
+    url(r'^submitask/$',submitask),
+
 ]
